@@ -1,0 +1,174 @@
+.book-me {
+  padding: 6rem 0;
+  position: relative;
+  z-index: 10;
+}
+
+.book-me-content {
+  display: flex;
+  overflow: hidden;
+  padding: 0; 
+  background: linear-gradient(145deg, rgba(30, 41, 59, 0.6), rgba(15, 23, 42, 0.8));
+}
+
+.book-me-info {
+  flex: 1;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.book-me-info::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: radial-gradient(circle at top left, rgba(20, 184, 166, 0.1), transparent 60%);
+  z-index: -1;
+}
+
+.book-me-description {
+  color: var(--text-muted);
+  font-size: 1.125rem;
+  margin-bottom: 3rem;
+  max-width: 90%;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contact-icon-wrapper {
+  width: 48px; height: 48px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-item h4 {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.contact-item p {
+  font-size: 1rem;
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+.book-me-form-container {
+  flex: 1;
+  padding: 4rem;
+  background: rgba(15, 23, 42, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.form-header {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+}
+.form-row .form-group {
+  flex: 1;
+}
+
+.book-me-form label {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 1rem;
+  color: var(--text-muted);
+}
+
+.book-me-form input, 
+.book-me-form select {
+  width: 100%;
+  padding: 0.875rem 1rem 0.875rem 2.8rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: var(--text-main);
+  font-family: inherit;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.full-width-select {
+  padding-left: 1rem !important;
+}
+
+.book-me-form input:focus,
+.book-me-form select:focus {
+  outline: none;
+  border-color: var(--accent-teal);
+  background: rgba(20, 184, 166, 0.05);
+  box-shadow: 0 0 0 2px rgba(20, 184, 166, 0.1);
+}
+
+.book-me-form select option {
+  background: var(--bg-dark);
+  color: var(--text-main);
+}
+
+/* Fix calendar icon color for dark mode in some browsers */
+.book-me-form input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.form-submit-btn {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+@media (max-width: 992px) {
+  .book-me-content {
+    flex-direction: column;
+  }
+  .book-me-info {
+    padding: 3rem 2rem;
+  }
+  .book-me-form-container {
+    padding: 3rem 2rem;
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+}
