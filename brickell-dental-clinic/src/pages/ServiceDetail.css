@@ -1,0 +1,92 @@
+/* Shared CSS for individual Service Detail pages */
+
+.service-detail-page .page-header {
+  padding: 5rem 0 4rem;
+}
+
+.service-detail-content {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 4rem;
+}
+
+.service-main {
+  font-size: 1.1rem;
+  color: var(--text-dark);
+}
+
+.service-main h2 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.service-main p {
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
+
+.service-main ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.service-main ul li {
+  position: relative;
+  padding-left: 1.75rem;
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+}
+
+.service-main ul li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.service-sidebar {
+  position: sticky;
+  top: 100px;
+}
+
+.sidebar-card {
+  background-color: var(--secondary-color);
+  padding: 2rem;
+  border-radius: var(--border-radius-lg);
+  border-top: 4px solid var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+.sidebar-card h3 {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.hero-image-placeholder {
+  width: 100%;
+  height: 400px;
+  background-color: #cbd5e1;
+  border-radius: var(--border-radius-lg);
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .service-detail-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .service-sidebar {
+    position: static;
+  }
+}
